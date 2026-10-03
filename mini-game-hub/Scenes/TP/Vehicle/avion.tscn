@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bmoxgua8exs6c"]
+
+[ext_resource type="Texture2D" uid="uid://dxfsj6lngvnf6" path="res://Assets/Cars/bus.png" id="1_bg5re"]
+[ext_resource type="Script" uid="uid://b8si600k234iq" path="res://avion.gd" id="1_fh768"]
+
+[node name="Vehicle" type="Sprite2D" unique_id=546650241]
+texture = ExtResource("1_bg5re")
+script = ExtResource("1_fh768")
+metadata/_custom_type_script = "uid://cb6w2l6u4ip1q"

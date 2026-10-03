@@ -1,15 +1,19 @@
-[gd_scene load_steps=3 format=3]
+[gd_scene format=3 uid="uid://dud5evupphicd"]
 
 [ext_resource type="PackedScene" path="res://Scenes/UI/GameButton.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://Scenes/Games/ExampleGame.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://bl35nxv6fm4c5" path="res://Scenes/Games/ExampleGame.tscn" id="2"]
+[ext_resource type="PackedScene" uid="uid://dv4h05c1yrbkc" path="res://Scenes/TP/TP3oct.tscn" id="3_8saeu"]
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=634933511]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Title" type="Label" parent="."]
+[node name="Title" type="Label" parent="." unique_id=728735647]
+layout_mode = 0
 anchor_right = 1.0
 offset_top = 24.0
 offset_bottom = 74.0
@@ -18,19 +22,28 @@ theme_override_font_sizes/font_size = 32
 text = "Mini Game Hub"
 horizontal_alignment = 1
 
-[node name="CenterContainer" type="CenterContainer" parent="."]
+[node name="CenterContainer" type="CenterContainer" parent="." unique_id=645300047]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer"]
+[node name="ScrollContainer" type="ScrollContainer" parent="CenterContainer" unique_id=1525103771]
 custom_minimum_size = Vector2(280, 400)
+layout_mode = 2
 
-[node name="GameButtonList" type="VBoxContainer" parent="CenterContainer/ScrollContainer"]
+[node name="GameButtonList" type="VBoxContainer" parent="CenterContainer/ScrollContainer" unique_id=513010482]
 custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
 theme_override_constants/separation = 12
 
-[node name="ExampleGameButton" parent="CenterContainer/ScrollContainer/GameButtonList" instance=ExtResource("1")]
+[node name="ExampleGameButton" parent="CenterContainer/ScrollContainer/GameButtonList" unique_id=1870762214 instance=ExtResource("1")]
+layout_mode = 2
 text = "Example Game"
 target_scene = ExtResource("2")
+
+[node name="Button_TP3oct" parent="CenterContainer/ScrollContainer/GameButtonList" unique_id=1007955250 instance=ExtResource("1")]
+layout_mode = 2
+text = "TP 3 octobre"
+target_scene = ExtResource("3_8saeu")

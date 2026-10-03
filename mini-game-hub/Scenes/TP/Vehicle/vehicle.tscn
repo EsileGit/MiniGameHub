@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://d2snst4r1biy8"]
+
+[ext_resource type="Texture2D" uid="uid://d0cjonq1ry2sm" path="res://Assets/Cars/convertible.png" id="1_4p48t"]
+[ext_resource type="Script" uid="uid://cb6w2l6u4ip1q" path="res://Scripts/vehicle.gd" id="2_4p48t"]
+[ext_resource type="AudioStream" uid="uid://dfigv5fx8cslw" path="res://Sounds/beltHandle1.ogg" id="3_5ry16"]
+
+[node name="VehicleSprite" type="Sprite2D" unique_id=1311869189]
+texture = ExtResource("1_4p48t")
+script = ExtResource("2_4p48t")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=900442203]
+stream = ExtResource("3_5ry16")
