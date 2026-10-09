@@ -17,6 +17,7 @@ var current_direction:Vector2
 
 func _ready() -> void:
 	current_direction = direction
+	print(typeof(current_direction))
 	
 func _process(delta: float) -> void:
 	var direction_to_target:Vector2 = global_position.direction_to(target.global_position)
