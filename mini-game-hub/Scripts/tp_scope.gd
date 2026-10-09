@@ -10,6 +10,13 @@ func add_score(points: int = 1) -> void:
 	if (score > 100):
 		var message = "Bien joué !"
 		print(message)
+	elif (score < 20):
+		var message = "C'est pas ouf"
+		print(message)
+	else:
+		var message = "Pas mal mais améliorable"
+		print(message)
+		
 	
 	print("Nouveau score: ", score)
 	# Problèmes de scope:	
