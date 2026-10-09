@@ -1,6 +1,10 @@
 [gd_scene format=3 uid="uid://d4gmwrr3yuq21"]
 
 [ext_resource type="Script" uid="uid://du0d0dcx076mi" path="res://Scripts/tp_scope.gd" id="1_ayh83"]
+[ext_resource type="Script" uid="uid://c8gaetb3cm3kx" path="res://Scripts/tp_scope_exo.gd" id="2_7u48m"]
 
 [node name="Node" type="Node" unique_id=533666923]
 script = ExtResource("1_ayh83")
+
+[node name="Node" type="Node" parent="." unique_id=1798394417]
+script = ExtResource("2_7u48m")
