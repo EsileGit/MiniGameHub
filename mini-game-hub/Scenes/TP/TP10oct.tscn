@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dm0kqvyqml6pd"]
+
+[ext_resource type="PackedScene" uid="uid://c7nluts0bsmwd" path="res://Scenes/TP/Vehicle/toggling_car.tscn" id="1_h5uy4"]
+
+[node name="Root" type="Node2D" unique_id=883542736]
+
+[node name="Car" parent="." unique_id=181129773 instance=ExtResource("1_h5uy4")]
+position = Vector2(119, 131)
+
+[node name="Target_1" type="Marker2D" parent="." unique_id=412030468]
+position = Vector2(338, 332)
+
+[node name="Target_2" type="Marker2D" parent="." unique_id=1787001767]
+position = Vector2(847, 50)

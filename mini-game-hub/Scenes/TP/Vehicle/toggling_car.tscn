@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://c7nluts0bsmwd"]
+
+[ext_resource type="Texture2D" uid="uid://dxfsj6lngvnf6" path="res://Assets/Cars/bus.png" id="1_jxhnu"]
+
+[node name="Car" type="Sprite2D" unique_id=181129773]
+texture = ExtResource("1_jxhnu")
