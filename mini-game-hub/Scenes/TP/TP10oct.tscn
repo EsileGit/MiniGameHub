@@ -7,6 +7,11 @@
 [node name="Car" parent="." unique_id=181129773 instance=ExtResource("1_h5uy4")]
 position = Vector2(119, 131)
 
+[node name="SlowBus" parent="." unique_id=430510762 instance=ExtResource("1_h5uy4")]
+position = Vector2(244, 385)
+speed = 100.0
+direction_of_movement = Vector2(-1, 1)
+
 [node name="Target_1" type="Marker2D" parent="." unique_id=412030468]
 position = Vector2(338, 332)
 

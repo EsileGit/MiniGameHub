@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c7nluts0bsmwd"]
 
 [ext_resource type="Texture2D" uid="uid://dxfsj6lngvnf6" path="res://Assets/Cars/bus.png" id="1_jxhnu"]
+[ext_resource type="Script" uid="uid://dy1vsturj7dhg" path="res://Scripts/toggling_car.gd" id="2_88072"]
 
 [node name="Car" type="Sprite2D" unique_id=181129773]
 texture = ExtResource("1_jxhnu")
+script = ExtResource("2_88072")
