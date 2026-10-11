@@ -13,12 +13,8 @@ func _ready() -> void:
 	
 # Fonction appelée à chaque frame
 func _process(delta: float) -> void:
-	if (Input.is_action_just_pressed("ToggleTarget")):
-		go_to_target_one = !go_to_target_one
-		print("La touche espace a été pressée")
-	
+	check_inputs()
 	var coordinates_to_reach: Vector2 = get_target_coordinates()
-	
 	global_position = global_position.move_toward(coordinates_to_reach, delta * speed)
 	
 # Fonction qui renvoie la cible choisie
@@ -28,6 +24,12 @@ func get_target_coordinates() -> Vector2:
 		return target_coordinates_one
 	else:
 		return target_coordinates_two
+	
+# Fonction qui gère les inputs joueurs
+func check_inputs() -> void:
+	if (Input.is_action_just_pressed("ToggleTarget")):
+		go_to_target_one = !go_to_target_one
+		print("La touche espace a été pressée")
 	
 	
 # Fonction pour aider le debug
