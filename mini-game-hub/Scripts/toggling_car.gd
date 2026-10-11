@@ -2,8 +2,8 @@ extends Sprite2D
 
 # Paramètres règlables
 @export var speed: float = 300.0
-@export var target_coordinates_one: Vector2 = Vector2(150.0, 230.0) # pour plus de clarté, on renomme notre variable
-@export var target_coordinates_two: Vector2 = Vector2(150.0, 230.0) 
+@export var target_one: Node2D 
+@export var target_two: Marker2D 
 
 # Variables fonctionnelles (ne sont pas issue d'une data reglée par l'utilisateur)
 var go_to_target_one: bool = true # par défaut, on se dirige vers la première cible
@@ -21,15 +21,15 @@ func _process(delta: float) -> void:
 func get_target_coordinates() -> Vector2:
 	# Choix de la cible en fonction du booléen
 	if (go_to_target_one):
-		return target_coordinates_one
+		return target_one.global_position
 	else:
-		return target_coordinates_two
+		return target_two.global_position
 	
 # Fonction qui gère les inputs joueurs
 func check_inputs() -> void:
 	if (Input.is_action_just_pressed("ToggleTarget")):
 		go_to_target_one = !go_to_target_one
-		print("La touche espace a été pressée")
+		print("On se dirige vers la première target ? ", go_to_target_one)
 	
 	
 # Fonction pour aider le debug

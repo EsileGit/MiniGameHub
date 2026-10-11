@@ -4,16 +4,16 @@
 
 [node name="Root" type="Node2D" unique_id=883542736]
 
-[node name="Car" parent="." unique_id=181129773 instance=ExtResource("1_h5uy4")]
+[node name="Car" parent="." unique_id=181129773 node_paths=PackedStringArray("target_one", "target_two") instance=ExtResource("1_h5uy4")]
 position = Vector2(119, 131)
-target_coordinates_one = Vector2(338, 332)
-target_coordinates_two = Vector2(847, 50)
+target_one = NodePath("../Target_1")
+target_two = NodePath("../Target_2")
 
-[node name="SlowBus" parent="." unique_id=430510762 instance=ExtResource("1_h5uy4")]
+[node name="SlowBus" parent="." unique_id=430510762 node_paths=PackedStringArray("target_one", "target_two") instance=ExtResource("1_h5uy4")]
 position = Vector2(244, 385)
 speed = 100.0
-target_coordinates_one = Vector2(44, 256)
-target_coordinates_two = Vector2(847, 50)
+target_one = NodePath("../Car")
+target_two = NodePath("../Target_2")
 
 [node name="Target_1" type="Marker2D" parent="." unique_id=412030468]
 position = Vector2(338, 332)
