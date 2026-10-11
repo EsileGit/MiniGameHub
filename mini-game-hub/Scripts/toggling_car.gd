@@ -11,16 +11,18 @@ func _ready() -> void:
 	
 # Fonction appelée à chaque frame
 func _process(delta: float) -> void:
-	
-	var coordinates_to_reach: Vector2
-	
-	if (go_to_target_one):
-		coordinates_to_reach = target_coordinates_one
-	else:
-		coordinates_to_reach = target_coordinates_two
-		
+	var coordinates_to_reach: Vector2 = get_target_coordinates()
 	print(name, " has selected coordinates: ", coordinates_to_reach)
+	
 	global_position = global_position.move_toward(coordinates_to_reach, delta * speed)
+	
+# Fonction qui renvoie la cible choisie
+func get_target_coordinates() -> Vector2:
+	# Choix de la cible en fonction du booléen
+	if (go_to_target_one):
+		return target_coordinates_one
+	else:
+		return target_coordinates_two
 	
 	
 # Fonction pour aider le debug
