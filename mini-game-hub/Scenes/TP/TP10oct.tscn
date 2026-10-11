@@ -6,12 +6,15 @@
 
 [node name="Car" parent="." unique_id=181129773 instance=ExtResource("1_h5uy4")]
 position = Vector2(119, 131)
-target_coordinates = Vector2(338, 332)
+target_coordinates_one = Vector2(338, 332)
+target_coordinates_two = Vector2(847, 50)
 
 [node name="SlowBus" parent="." unique_id=430510762 instance=ExtResource("1_h5uy4")]
 position = Vector2(244, 385)
 speed = 100.0
-target_coordinates = Vector2(847, 50)
+target_coordinates_one = Vector2(338, 332)
+target_coordinates_two = Vector2(847, 50)
+go_to_target_one = false
 
 [node name="Target_1" type="Marker2D" parent="." unique_id=412030468]
 position = Vector2(338, 332)
