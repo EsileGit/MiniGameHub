@@ -3,7 +3,7 @@ extends Sprite2D
 # Paramètres règlables
 @export var speed: float = 300.0
 @export var target_one: Node2D 
-@export var target_two: Marker2D 
+@export var target_two: Node2D 
 
 # Variables fonctionnelles (ne sont pas issue d'une data reglée par l'utilisateur)
 var go_to_target_one: bool = true # par défaut, on se dirige vers la première cible

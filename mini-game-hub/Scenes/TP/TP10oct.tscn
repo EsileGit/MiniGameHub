@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://dm0kqvyqml6pd"]
 
+[ext_resource type="Script" uid="uid://mx41nnbf1kyk" path="res://Scripts/tp_10_oct.gd" id="1_eaba4"]
 [ext_resource type="PackedScene" uid="uid://c7nluts0bsmwd" path="res://Scenes/TP/Vehicle/toggling_car.tscn" id="1_h5uy4"]
 
 [node name="Root" type="Node2D" unique_id=883542736]
+script = ExtResource("1_eaba4")
 
 [node name="Car" parent="." unique_id=181129773 node_paths=PackedStringArray("target_one", "target_two") instance=ExtResource("1_h5uy4")]
 position = Vector2(119, 131)
