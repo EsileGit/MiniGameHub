@@ -4,8 +4,48 @@ var or_joueur: int = 62
 var prix_epee: int = 75
 var degat: int = 6
 var vie: int = 13
+var nom: String = "Josette"
 
+	
+	
 func _ready() -> void:
+	# faire l'appel de la fonction
+	var vie_restante = take_damage(36000, 37000)
+	print(vie_restante)
+	if (vie_restante == 0):
+		print("game over")
+	
+	
+	
+	
+	
+	
+	
+func take_damage(current_health: int, damage: int = 10) -> int:
+	if (current_health < 0):
+		return 0
+	if (damage > 1000):
+		return 0
+		
+	print("Santé avant calcul: ", current_health)
+	current_health = current_health - damage
+	print("Santé après degats: ", current_health)
+	
+	# Remise de la vie à zero
+	if (current_health <= 0):
+		current_health = 0
+		print("T'es mort")
+	else:
+		print("On est en vie")
+		
+	# Je finis l'exécution de ma fonction take_damage() et je renvoie la valeur
+	# contenue dans current_health
+	return current_health
+	
+	
+	
+	
+func exo_1() -> void:
 	# Achat épée
 	#bool = booléen => une valeur qui peut être "true" ou "false"
 	var peut_acheter: bool = or_joueur >= prix_epee
@@ -47,5 +87,9 @@ func _ready() -> void:
 	if (vie_apres_critique < 0):
 		vie_apres_critique = 0
 	print("vie_apres_critique = ", vie_apres_critique)
-		
+	
+	# Je finis ma fonction exo_1
+	return 
+	
+	
 	
