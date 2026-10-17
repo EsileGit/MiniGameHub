@@ -6,14 +6,37 @@ var degat: int = 6
 var vie: int = 13
 var nom: String = "Josette"
 
+# Tableaux
+#						    0         1       2
+var inv: Array[String] = ["épée", "potion", "clé"]
+var inv_joseph = inv.duplicate()
 	
 	
 func _ready() -> void:
-	# faire l'appel de la fonction
-	var vie_restante = take_damage(36000, 37000)
-	print(vie_restante)
-	if (vie_restante == 0):
-		print("game over")
+	# Joseph gagne un boulier
+	inv_joseph.append("bouclier")
+	
+	# l'inventaire de l'autre joueur perd son épée
+	var index_epee: int = inv.find("épée")
+	inv.remove_at(index_epee)
+	inv.erase("épée")
+	
+	var size_inv_Joseph: int = inv_joseph.size()
+	# ["épée", "potion", "clé", "bouclier"]
+	# Quel est le dernier élément ?
+	print(inv_joseph[- 1])
+	
+	
+	
+	# Est-ce que Joseph possède une clé ?
+	if (inv_joseph.has("clé_bleue")):
+		print("Il peut ouvrir la porte bleue")
+	else:
+		print("condamné à rester dans le vestibule")
+	
+	print("Inventaire Joseph: ", inv_joseph)
+	print("Inventaire de l'autre joueur: ", inv)
+	
 	
 	
 	
