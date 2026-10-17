@@ -2,7 +2,17 @@ extends Node2D
 
 	
 func _ready() -> void:
-	pass
+	var save:String = "  ana la brave;120.3;80  "
+	var data: = save.strip_edges().split(";")
+	
+	var name: String = data[0].capitalize()
+	
+	var gold: float = data[1].to_float()
+	gold += 50
+	
+	var pv:int = data[2].to_int()
+	
+	print("%s | Or : %.2f | PV : %d" % [name, gold, pv])
 	
 	
 	
@@ -17,7 +27,7 @@ var wave_size: int = 8
 var enemy_hp: int = 30
 
 func prep_TP():
-	print("TP arrays")
+	print("TP arrays".strip_edges())
 	# 1
 	print(inv[1], " " , inv[-1], "\n")
 	# 2
