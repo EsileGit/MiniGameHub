@@ -6,16 +6,14 @@
 [node name="Root" type="Node2D" unique_id=883542736]
 script = ExtResource("1_eaba4")
 
-[node name="Car" parent="." unique_id=181129773 node_paths=PackedStringArray("target_one", "target_two") instance=ExtResource("1_h5uy4")]
+[node name="Car" parent="." unique_id=181129773 node_paths=PackedStringArray("targets") instance=ExtResource("1_h5uy4")]
 position = Vector2(119, 131)
-target_one = NodePath("../Target_1")
-target_two = NodePath("../Target_2")
+targets = [NodePath("../Target_1"), NodePath("../Target_3"), NodePath("../Target_2")]
 
-[node name="SlowBus" parent="." unique_id=430510762 node_paths=PackedStringArray("target_one", "target_two") instance=ExtResource("1_h5uy4")]
+[node name="SlowBus" parent="." unique_id=430510762 node_paths=PackedStringArray("targets") instance=ExtResource("1_h5uy4")]
 position = Vector2(244, 385)
 speed = 100.0
-target_one = NodePath("../Car")
-target_two = NodePath("../Target_2")
+targets = [NodePath("../Target_1"), NodePath("../Target_2"), NodePath("../Car"), NodePath("../Target_3"), NodePath("../Target_3"), NodePath("../Target_1")]
 
 [node name="Target_1" type="Marker2D" parent="." unique_id=412030468]
 position = Vector2(338, 332)
@@ -25,3 +23,6 @@ position = Vector2(847, 50)
 
 [node name="Target_3" type="Marker2D" parent="." unique_id=919103766]
 position = Vector2(44, 256)
+
+[node name="Node2D_Simple" type="Node2D" parent="." unique_id=1536960889]
+position = Vector2(609, 194)
