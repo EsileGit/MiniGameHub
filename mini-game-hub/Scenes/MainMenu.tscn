@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bl35nxv6fm4c5" path="res://Scenes/Games/ExampleGame.tscn" id="2"]
 [ext_resource type="PackedScene" uid="uid://dv4h05c1yrbkc" path="res://Scenes/TP/TP3oct.tscn" id="3_8saeu"]
 [ext_resource type="PackedScene" uid="uid://dm0kqvyqml6pd" path="res://Scenes/TP/TP10oct.tscn" id="4_ghw46"]
+[ext_resource type="PackedScene" uid="uid://ovxjte3x8uef" path="res://Scenes/TP/TP17oct.tscn" id="5_df05h"]
 
 [node name="MainMenu" type="Control" unique_id=634933511]
 layout_mode = 3
@@ -53,3 +54,8 @@ target_scene = ExtResource("3_8saeu")
 layout_mode = 2
 text = "TP 10 octobre"
 target_scene = ExtResource("4_ghw46")
+
+[node name="Button_TP17oct" parent="CenterContainer/ScrollContainer/GameButtonList" unique_id=1643222863 instance=ExtResource("1")]
+layout_mode = 2
+text = "TP 17 octobre"
+target_scene = ExtResource("5_df05h")
