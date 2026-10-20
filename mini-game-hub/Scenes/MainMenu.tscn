@@ -59,3 +59,8 @@ target_scene = ExtResource("4_ghw46")
 layout_mode = 2
 text = "TP 17 octobre"
 target_scene = ExtResource("5_df05h")
+
+[node name="Button_TP20oct" parent="CenterContainer/ScrollContainer/GameButtonList" unique_id=1397412207 instance=ExtResource("1")]
+layout_mode = 2
+text = "TP 17 octobre"
+target_scene = ExtResource("5_df05h")
