@@ -3,8 +3,9 @@ extends Node
 # Paramètres
 var save: String = "  ana la brave;120;80  \n"
 var ennemis: Array = ["Slime", "Gobelin", "Dragon"]
-var wave_size: int = 8
+var wave_size: int = 16
 var enemy_hp: int = 30
+var group_size: int = 4
 
 
 
@@ -13,26 +14,37 @@ var enemy_hp: int = 30
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var total_hp: int = 0
+	var tableau: String = ""
+	# i = 0 & j = 1 -> 1
+	# i = 0 & j = 2 -> 2
+	# i = 1 & j = 1 -> 5
 	
 	# Ennemis
-	for i in range(1, wave_size + 1):
-		var sentence_to_print: String = "Ennemi " + str(i)
+	for i in range(wave_size / group_size):
+		var ligne: String = ""
 		
-		# Par défaut, l'ennemi (de base) a enemy_hp points de vie
-		var current_enemy_hp: int = enemy_hp
-		
-		# Est-on un boss ?
-		if (i % 4 == 0):
-			# Les boss ont 2x plus de PV
-			current_enemy_hp = enemy_hp * 2
-			sentence_to_print = sentence_to_print + " : BOSS"
-		
-		# Mise à jour des PV totaux
-		total_hp += current_enemy_hp
-		
-		print(sentence_to_print)
-		
+		for j in range(1, group_size + 1):
+			var sentence_to_print: String = "Ennemi " + str(i * group_size + j)
+			
+			# Par défaut, l'ennemi (de base) a enemy_hp points de vie
+			var current_enemy_hp: int = enemy_hp
+			
+			# Est-on un boss ?
+			if (j % group_size == 0):
+				# Les boss ont 2x plus de PV
+				current_enemy_hp = enemy_hp * 2
+				sentence_to_print = sentence_to_print + " : BOSS"
+				ligne += "B"
+			else:
+				ligne += "E"
+			
+			# Mise à jour des PV totaux
+			total_hp += current_enemy_hp
+			
+			print(sentence_to_print)
+		tableau += ligne + "\n"
 	print("total hp : ", total_hp)
+	print(tableau)
 	
 		
 		
