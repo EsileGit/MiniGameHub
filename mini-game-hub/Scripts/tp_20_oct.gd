@@ -22,36 +22,6 @@ func _ready() -> void:
 	print("apres heal ", vie)
 	
 	
-func autre():
-	
-	var harry = Character.new()
-	var ron = harry
-	ron.char_name = "Ron"
-	var snape = Character.new(500)
-	snape.char_name = "Snape"
-	snape.set_health(400)
-	var hermione = Character.new(57, "Hermione", "purse")
-	
-	harry.print_health()
-	ron.print_health()
-	snape.print_health()
-	
-	harry.char_name = "Harry"
-	harry.weapon = "Elder wand"
-	harry.weapon_damage = 35
-	snape.weapon = "Sarcasm"
-	snape.weapon_damage = 28
-	hermione.weapon_damage = 3
-	hermione.take_damage(600)
-	
-	harry.display_stats()
-	snape.display_stats()
-	hermione.display_stats()
-	
-	hermione.heal(50)
-	hermione.display_stats()
-	hermione.heal(500)
-	hermione.display_stats()
 	
 	
 	

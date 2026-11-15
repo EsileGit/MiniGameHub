@@ -10,8 +10,6 @@ func _ready() -> void:
 	var baguette_nulle: Weapon = Weapon.create_wizard_weapon()
 	baguette_nulle.display_stats()
 	
-	var arc_de_feu: Weapon = Weapon.new(Weapon.WeaponType.BOW)
-	
 	var harry: Character = Character.new("Harry", 60)
 	
 	var snape: Character = Character.create_teacher("Snape")

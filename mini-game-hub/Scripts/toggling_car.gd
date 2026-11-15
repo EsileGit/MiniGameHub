@@ -11,9 +11,6 @@ var current_index: int = 0
 
 func _ready() -> void:
 	display_car_properties()
-	position.move_toward()
-	move_toward()
-	position.direction_to()
 	
 # Fonction appelée à chaque frame
 func _process(delta: float) -> void:
