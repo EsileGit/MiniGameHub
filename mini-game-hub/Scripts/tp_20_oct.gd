@@ -9,16 +9,58 @@ var group_size: int = 4
 
 
 
-
+func soigner(vie_avant:int) -> int:
+	var vie_apres = vie_avant + 20
+	print(vie_apres)
+	return vie_apres
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	var vie: int = 140
+	print("avant heal ", vie)
+	vie = soigner(vie)
+	print("apres heal ", vie)
+	
+	
+func autre():
+	
+	var harry = Character.new()
+	var ron = harry
+	ron.char_name = "Ron"
+	var snape = Character.new(500)
+	snape.char_name = "Snape"
+	snape.set_health(400)
+	var hermione = Character.new(57, "Hermione", "purse")
+	
+	harry.print_health()
+	ron.print_health()
+	snape.print_health()
+	
+	harry.char_name = "Harry"
+	harry.weapon = "Elder wand"
+	harry.weapon_damage = 35
+	snape.weapon = "Sarcasm"
+	snape.weapon_damage = 28
+	hermione.weapon_damage = 3
+	hermione.take_damage(600)
+	
+	harry.display_stats()
+	snape.display_stats()
+	hermione.display_stats()
+	
+	hermione.heal(50)
+	hermione.display_stats()
+	hermione.heal(500)
+	hermione.display_stats()
+	
+	
+	
+func exo_for():
 	var total_hp: int = 0
 	var tableau: String = ""
 	# i = 0 & j = 1 -> 1
 	# i = 0 & j = 2 -> 2
 	# i = 1 & j = 1 -> 5
-	
 	# Ennemis
 	for i in range(wave_size / group_size):
 		var ligne: String = ""
