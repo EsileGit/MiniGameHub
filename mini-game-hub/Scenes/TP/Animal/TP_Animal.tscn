@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cvq21fhgnu0yv"]
+
+[ext_resource type="Script" uid="uid://dnh4thb1bo85c" path="res://Scripts/Animal/tp_animal.gd" id="1_kcahp"]
+
+[node name="TpAnimal" type="Node2D" unique_id=1285820768]
+script = ExtResource("1_kcahp")
